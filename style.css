@@ -198,6 +198,16 @@ footer nav ul li a {
     position: relative;
 }
 
+#burgerBtn {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    text-decoration: none;
+    color: #917290;
+    font-size: 35px;
+    display: none;
+}
+
 @media screen and (max-width: 1200px) {
     #wrapper {width: 960px}
     header {min-height: 750px}
@@ -224,6 +234,14 @@ footer nav ul li a {
     header nav {display: none}
     .card {width: 95%}
     iframe{width: 100%}
+    #title {margin-top: 50px}
+    .call_btn {transform: scale(0.7,0.7)}
+    #logo {
+        height: 250px;
+        width: 250px;
+    }
+    header {min-height: 620px}
+    #burgerBtn {display:block}
 }
 
 @media screen and (max-width: 320px){

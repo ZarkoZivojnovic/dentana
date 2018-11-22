@@ -23,7 +23,7 @@
             </ul>
         </nav>
         <hr>
-        <h1>Specijalistička stomatološka ordinacija</h1>
+        <h1 id="title">Specijalistička stomatološka ordinacija</h1>
         <div id="naziv">
             <img src="./img/naziv.png" alt="Dentana">
         </div>
@@ -113,6 +113,7 @@
     </nav>
 </footer>
 <a href="#" id="goToTop">⇑</a>
+<a href="#" id="burgerBtn">☰</a>
 <script>
     setTimeout(()=>{
         if (navigator.userAgent.indexOf("Firefox") === -1 || navigator.userAgent.indexOf("Chrome") === -1 ||
@@ -121,6 +122,11 @@
         }
         document.getElementById("header").style.top = "0";
     },100);
+
+    document.getElementById("burgerBtn").addEventListener("click", event=>{
+        event.preventDefault();
+        console.log("kliknuto!")
+    })
 </script>
 </body>
 </html>
