@@ -13,7 +13,8 @@
 <body>
 <div id="wrapper">
     <header id="header">
-        <nav>
+        <a href="#" id="burgerBtn">☰</a>
+        <nav id="mainNav">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#about_us">O nama</a></li>
@@ -113,20 +114,19 @@
     </nav>
 </footer>
 <a href="#" id="goToTop">⇑</a>
-<a href="#" id="burgerBtn">☰</a>
-<script>
-    setTimeout(()=>{
-        if (navigator.userAgent.indexOf("Firefox") === -1 || navigator.userAgent.indexOf("Chrome") === -1 ||
-            navigator.userAgent.indexOf("Safari") === -1 || navigator.userAgent.indexOf("Opera") === -1) {
-            document.getElementById("header").style.transition = "all 600ms ease-out";
-        }
-        document.getElementById("header").style.top = "0";
-    },100);
-
-    document.getElementById("burgerBtn").addEventListener("click", event=>{
-        event.preventDefault();
-        console.log("kliknuto!")
-    })
-</script>
+<div id="responsiveNav">
+    <nav>
+        <ul>
+            <li><a href="#" id="backBtn">🢀</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about_us">O nama</a></li>
+            <li><a href="#employees">Zaposleni</a></li>
+            <li><a href="#working_time">Radno vreme</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+</div>
+<div id="navBackground"></div>
+<script src="main.js"></script>
 </body>
 </html>

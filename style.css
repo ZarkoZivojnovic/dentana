@@ -5,6 +5,7 @@
 
 *, html, body {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
@@ -174,12 +175,24 @@ footer h3 {
     color: white;
 }
 
+footer ul {
+    display: flex;
+    flex-direction: row;
+}
+
+footer nav ul li {
+    display: block;
+    margin: auto;
+    border-bottom: solid 1px #b48cb3;
+}
+
 footer nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: normal;
     display: inline-block;
     width: 100%;
+    margin-top: 5px;
 }
 
 #goToTop {
@@ -200,12 +213,62 @@ footer nav ul li a {
 
 #burgerBtn {
     position: absolute;
-    top: 5px;
-    left: 5px;
+    left: 10px;
+    z-index: 2;
     text-decoration: none;
     color: #917290;
     font-size: 35px;
     display: none;
+}
+
+#navBackground {
+    display: none;
+    position: fixed;
+    top: 0;
+    min-height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#responsiveNav {
+    display: none;
+    overflow: hidden;
+    width: 0;
+    z-index: 2;
+    transition: width 600ms ease-in-out;
+}
+
+#responsiveNav nav ul {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 30px;
+}
+
+#responsiveNav li {
+    margin: 20px;
+    text-align: center;
+    border-bottom: solid 1px #b48cb3;
+}
+
+#responsiveNav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.visibleNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    min-height: 100%;
+    background-color: rgba(46, 10, 47, 0.8);
+    z-index: 2;
 }
 
 @media screen and (max-width: 1200px) {
@@ -242,6 +305,11 @@ footer nav ul li a {
     }
     header {min-height: 620px}
     #burgerBtn {display:block}
+    footer nav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 320px){
