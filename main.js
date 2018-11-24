@@ -1,3 +1,8 @@
+const goToTopBtn = document.getElementById("goToTop"),
+    responsiveNav = document.getElementById("responsiveNav"),
+    backBtn = document.getElementById("backBtn"),
+    navBackground = document.getElementById("navBackground");
+
 setTimeout(() => {
     if (navigator.userAgent.indexOf("Firefox") === -1 || navigator.userAgent.indexOf("Chrome") === -1 ||
         navigator.userAgent.indexOf("Safari") === -1 || navigator.userAgent.indexOf("Opera") === -1) {
@@ -6,13 +11,16 @@ setTimeout(() => {
     document.getElementById("header").style.top = "0";
 }, 100);
 
+setInterval(()=>{
+    if (window.scrollY > 50) {
+        goToTopBtn.style.display = "block";
+    } else {
+        goToTopBtn.style.display = "none";
+    }
+},1000);
+
 document.getElementById("burgerBtn").addEventListener("click", event => {
     event.preventDefault();
-    console.log("kliknuto!");
-    const responsiveNav = document.getElementById("responsiveNav"),
-        backBtn = document.getElementById("backBtn"),
-        navBackground = document.getElementById("navBackground");
-
     if (responsiveNav.style.display = "none") {
         responsiveNav.style.display = "block";
         responsiveNav.className = "visibleNav";
@@ -26,6 +34,7 @@ document.getElementById("burgerBtn").addEventListener("click", event => {
     }
 
     navBackground.addEventListener("click", hideSideNav);
+    responsiveNav.addEventListener("click", ()=>{backFromMenu()});
 
     function backFromMenu(event) {
         if (event) event.preventDefault();
@@ -41,6 +50,5 @@ document.getElementById("burgerBtn").addEventListener("click", event => {
         if (ev.target === ev.currentTarget) {
             backFromMenu();
         }
-
     }
-})
+});

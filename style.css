@@ -183,7 +183,7 @@ footer ul {
 footer nav ul li {
     display: block;
     margin: auto;
-    border-bottom: solid 1px #b48cb3;
+    border-bottom: solid 1px white;
 }
 
 footer nav ul li a {
