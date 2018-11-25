@@ -361,7 +361,7 @@ input:focus, textarea:focus{
     input, textarea {width: 80%}
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 300px){
     #wrapper {width: 100%}
     header {min-height: 600px}
     #footer_wrap {width: 100%}
@@ -376,5 +376,13 @@ input:focus, textarea:focus{
     #logo {
         width: 200px;
         height: 200px;
+    }
+    .call_btn {
+        transform: scale(0.5,0.5);
+        margin: 0 auto;
+    }
+
+    .call_btn a {
+        padding: 5px 30px;
     }
 }
