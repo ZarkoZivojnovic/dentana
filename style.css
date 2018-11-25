@@ -18,6 +18,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+a {
+    color:inherit;
+    text-decoration: none;
+}
+
 #wrapper {
     width: 1200px;
     margin: auto;
@@ -361,4 +366,15 @@ input:focus, textarea:focus{
     header {min-height: 600px}
     #footer_wrap {width: 100%}
     input, textarea {width: 100%}
+    h1,h2,h3,h4,p,label,li>a {
+        font-size: small;
+    }
+    h1#title {
+        font-size: small;
+        font-weight: normal;
+    }
+    #logo {
+        width: 200px;
+        height: 200px;
+    }
 }
