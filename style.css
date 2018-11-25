@@ -142,7 +142,13 @@ h1, h2, h3, h4 {
     margin: 20px auto;
     padding: 40px 25px;
     box-shadow: 0 0 7px gray;
-    background-image: linear-gradient(to right, rgba(193, 193, 193, 0.1), rgba(180, 140, 179, 0), rgba(193, 193, 193, 0.1));}
+    background-image: linear-gradient(to right, rgba(193, 193, 193, 0.1), rgba(180, 140, 179, 0), rgba(193, 193, 193, 0.1));
+    transition: box-shadow 300ms ease-in;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px gray;
+}
 
 hr {
     border: 0;
@@ -271,6 +277,43 @@ footer nav ul li a {
     z-index: 2;
 }
 
+label {
+    text-align: center;
+    display: block;
+    width: 70%;
+    margin: auto;
+    color: #917290;
+}
+
+input, textarea {
+    border: solid 1px #917290;
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: 70%;
+    margin: auto;
+    display: block;
+}
+
+textarea {resize: none}
+
+input[type=submit], input[type=reset] {
+    background-color: #b48cb3;
+    color:white;
+    border-radius: 20px;
+    padding: 5px 20px;
+    cursor: pointer;
+    width: 50%;
+    transition: background-color 200ms;
+}
+
+input[type=submit]:hover, input[type=reset]:hover {
+    background-color: #917290;
+}
+
+input:focus, textarea:focus{
+    outline: solid 1px transparent;
+}
+
 @media screen and (max-width: 1200px) {
     #wrapper {width: 960px}
     header {min-height: 750px}
@@ -310,10 +353,12 @@ footer nav ul li a {
         flex-direction: column;
         text-align: center;
     }
+    input, textarea {width: 80%}
 }
 
 @media screen and (max-width: 320px){
     #wrapper {width: 100%}
     header {min-height: 600px}
     #footer_wrap {width: 100%}
+    input, textarea {width: 100%}
 }
