@@ -28,6 +28,9 @@ document.getElementById("burgerBtn").addEventListener("click", event => {
         setTimeout(() => {
             responsiveNav.style.width = "300px";
         }, 100);
+        setTimeout(()=>{
+            document.getElementById("navigationResponsive").style.display = "block";
+        },500);
         backBtn.addEventListener("click", backFromMenu)
     } else {
         backFromMenu();
@@ -39,6 +42,7 @@ document.getElementById("burgerBtn").addEventListener("click", event => {
     function backFromMenu(event) {
         if (event) event.preventDefault();
         responsiveNav.style.width = "0";
+        document.getElementById("navigationResponsive").style.display = "none";
         setTimeout(() => {
             responsiveNav.style.display = "none";
             navBackground.style.display = "none";

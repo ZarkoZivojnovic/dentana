@@ -282,6 +282,8 @@ footer nav ul li a {
     z-index: 2;
 }
 
+#navigationResponsive {display: none}
+
 label {
     text-align: center;
     display: block;
@@ -369,14 +371,17 @@ input:focus, textarea:focus{
     h1,h2,h3,h4,p,label,li>a {
         font-size: small;
     }
+
     h1#title {
         font-size: small;
         font-weight: normal;
     }
+
     #logo {
         width: 200px;
         height: 200px;
     }
+
     .call_btn {
         transform: scale(0.5,0.5);
         margin: 0 auto;
