@@ -11,33 +11,37 @@ setTimeout(() => {
     document.getElementById("header").style.top = "0";
 }, 100);
 
-setInterval(()=>{
+setInterval(() => {
     if (window.scrollY > 50) {
         goToTopBtn.style.display = "block";
     } else {
         goToTopBtn.style.display = "none";
     }
-},1000);
+}, 1000);
 
 document.getElementById("burgerBtn").addEventListener("click", event => {
     event.preventDefault();
-    if (responsiveNav.style.display = "none") {
+    if (responsiveNav.style.display === "none" || !responsiveNav.style.display) {
         responsiveNav.style.display = "block";
         responsiveNav.className = "visibleNav";
         navBackground.style.display = "block";
         setTimeout(() => {
             responsiveNav.style.width = "300px";
         }, 100);
-        setTimeout(()=>{
+        setTimeout(() => {
             document.getElementById("navigationResponsive").style.display = "block";
-        },500);
+        }, 500);
         backBtn.addEventListener("click", backFromMenu)
     } else {
         backFromMenu();
     }
 
     navBackground.addEventListener("click", hideSideNav);
-    responsiveNav.addEventListener("click", ()=>{backFromMenu()});
+    responsiveNav.addEventListener("click", event => {
+        if (event.target !== event.currentTarget) {
+            backFromMenu();
+        }
+    });
 
     function backFromMenu(event) {
         if (event) event.preventDefault();
