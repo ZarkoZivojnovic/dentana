@@ -19,3 +19,5 @@ jobs:
           username: ${{ secrets.USER }}
           password: ${{ secrets.PASS }}
           server-dir: public_html/
+          log-level: verbose
+          timeout: 60000
